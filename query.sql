@@ -69,3 +69,15 @@ INSERT INTO Bookings (booking_id, user_id, match_id, seat_number, payment_status
 (504, 2, 101, NULL, NULL, 150.00),
 (505, 3, 102, 'C-20', 'Pending', 120.00);
 
+-- Query 01: Retrieve all upcoming football matches belonging to the 'Champions League' where the match status is 'Available'.
+
+select * from matches
+ where tournament_category = 'Champions League' and match_status = 'Available'
+
+
+-- Query 2: Search for all users whose full names start with 'Tanvir' or contain the phrase 'Haque' (case-insensitive).
+
+select * from users
+ where full_name like 'Tanvir%' or full_name like '%Haque%'
+
+
